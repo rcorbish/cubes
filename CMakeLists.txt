@@ -16,5 +16,7 @@ endif( NO_HARDWARE )
 include_directories( ${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS} )
 
 add_executable( cubes cubes.cpp )
+add_executable( cones cones.cpp )
 
 target_link_libraries( cubes ${OPENGL_LIBRARIES} ${GLUT_glut_LIBRARY} )
+target_link_libraries( cones ${OPENGL_LIBRARIES} ${GLUT_glut_LIBRARY} )
