@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+cubes
+stb/
+textures/
+
