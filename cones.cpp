@@ -19,6 +19,7 @@
 #include "setup.h"
 #include "texture.h"
 
+
 std::shared_ptr<Shape> base ;
 std::shared_ptr<Texture> texture ;
 
@@ -131,6 +132,7 @@ void make_base( float *vertices, int num_triangles ) {
     vertices[xIndex + 2] = v2.z ;
 
     vValue += vChange + vChange ;
+
     vertices[sIndex] = vValue ;
     vertices[sIndex + 1] = 1.f ;
 
@@ -188,10 +190,10 @@ void display(){
 // main() function
 // ----------------------------------------------------------
 int main(int argc, char* argv[]) {
- 
   setup( display, argc, argv ) ;
 
-  texture = std::make_shared<Texture>( "textures/bark.jpg" ) ;
+  texture = std::make_shared<Texture>( "textures/gold.jpg" ) ;
+
   glm::vec3 lightPos( -2.f, 1.f, 0.f ) ;
   std::shared_ptr<Shader> baseShader = std::make_shared<Shader>( "shaders/shader.vs", "shaders/shader.fs" ); 
   baseShader->use() ;

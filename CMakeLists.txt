@@ -13,7 +13,7 @@ add_compile_options( -g )
 include_directories( ${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS} )
 
 add_executable( cubes cubes.cpp )
-add_executable( cones cones.cpp texture.cpp shape.cpp setup.cpp texture.h shape.h setup.h )
+add_executable( cones cones.cpp texture.cpp shape.cpp setup.cpp shader.cpp texture.h shape.h setup.h shader.h )
 
 target_link_libraries( cubes ${OPENGL_LIBRARIES} ${GLUT_glut_LIBRARY} )
 target_link_libraries( cones ${OPENGL_LIBRARIES} ${GLUT_glut_LIBRARY} )

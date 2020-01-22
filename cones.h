@@ -4,7 +4,7 @@
 // ----------------------------------------------------------
 // Base Circle data
 // ----------------------------------------------------------
-constexpr int BASE_NUM_SIDES = 10 ;
+constexpr int BASE_NUM_SIDES = 32 ;
 constexpr int BASE_NUM_VERTICES = ( BASE_NUM_SIDES * 3 ) ;
 constexpr double base_radius = 8.0 ;
 constexpr double base_height = 8.0 ;
