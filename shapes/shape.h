@@ -4,23 +4,28 @@
 
 #include <memory>
 
-#include "shader.h"
-#include "texture.h"
+#include <shader.h>
+#include <texture.h>
 
 class Shape {
 
- private:
-  GLuint  VBO ;  // it's static so won't need this again
-  GLuint  VAO ;
+private:
   std::shared_ptr<Shader> program ;
   std::shared_ptr<Texture> texture ;
+
+protected:
+  GLuint  VBO ;
+  GLuint  VAO ;
   int numVertices ;
   unsigned short *indices ;
 
+
  public:
-  ~Shape() ;
-  Shape( std::shared_ptr<Shader> program, float *vertices, int numVertices, std::shared_ptr<Texture> texture ) ;
+  virtual ~Shape() ;
+  Shape( std::shared_ptr<Shader> program, int numVertices, std::shared_ptr<Texture> texture ) ;
   void draw( glm::mat4 &matrixCamera, glm::mat4 &matrixModel ) ;
+
+  virtual void initVertexData() = 0 ;
 
   static constexpr int FloatsPerVertex = 3 + 3 + 2 ;   // position + normal + texture coord
   static constexpr size_t BytesPerVertex = sizeof(float) * FloatsPerVertex ;
